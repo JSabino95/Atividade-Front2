@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculando a Média</title>
+      </head>
+      <body>
+        <h1>Calculando a Média</h1>
+        <script>
+
+let n1 = parseFloat(prompt("Informe a sua primeira nota:"));
+let n2 = parseFloat(prompt("Informe a sua segunda nota:"));
+let n3 = parseFloat(prompt("Informe a sua terceira nota:"));
+const media = (n1 + n2 + n3) / 3;
+
+alert(`A média é ${media.toFixed(2)}`);
+
+if (media >= 7) {
+  alert(`Parabéns, você foi APROVADO! Sua média é ${media.toFixed(2)}`);
+} else {
+  alert(`Você foi REPROVADO! Sua média é ${media.toFixed(2)}`);
+}
+        </script>
+      </body>
+    </html>
