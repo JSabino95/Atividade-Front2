@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de População</title>
+</head>
+<body>
+    <h1>Calculadora de População</h1>
+
+    <div>
+        <p>No país A temos uma população de 80,000 com taxa de crescimento de 3% ao ano.</p>
+        <p>No país B temos uma população de 200,000 com taxa de crescimento de 1.5% ao ano.</p>
+    </div>
+
+    <button onclick="calcularTempo()">Calcular Tempo</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calculartempo(populacaoA, taxaCrescimentoA, populacaoB, taxaCrescimentoB) {
+            let anos = 0;
+
+            while (populacaoA < populacaoB) {
+                populacaoA *= 1 + taxaCrescimentoA / 100;
+                populacaoB *= 1 + taxaCrescimentoB / 100;
+                anos++;
+            }
+
+            return anos;
+        }
+
+        function calcularTempo() {
+            const populacaoA = 80000;
+            const taxaCrescimentoA = 3;
+            const populacaoB = 200000;
+            const taxaCrescimentoB = 1.5;
+
+            const anosNecessarios = calculartempo   (populacaoA, taxaCrescimentoA, populacaoB, taxaCrescimentoB);
+
+            const resultadoElement = document.getElementById("resultado");
+            resultadoElement.textContent = `Levará aproximadamente ${anosNecessarios} anos para a população do país A igualar ou ultrapassar a população do país B.`;
+        }
+    </script>
+</body>
+</html>

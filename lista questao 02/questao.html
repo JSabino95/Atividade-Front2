@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem de Números Pares e Ímpares</title>
+</head>
+<body>
+    <h1>Contagem de Números Pares e Ímpares</h1>
+    
+    <script>
+        let numerosPares = 0;
+        let numerosImpares = 0;
+
+        for (let i = 0; i < 10; i++) {
+          const numero = parseInt(prompt(`Informe o ${i + 1}º número inteiro:`));
+          
+          if (numero % 2 === 0) {
+            numerosPares++;
+          } else {
+            numerosImpares++;
+          }
+        }
+
+        document.write(`<p>Quantidade de números pares: ${numerosPares}</p>`);
+        document.write(`<p>Quantidade de números ímpares: ${numerosImpares}</p>`);
+    </script>
+</body>
+</html>

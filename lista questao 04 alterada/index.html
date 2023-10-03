@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Salário</title>
+</head>
+<body>
+    <h1>Calculadora de Salário</h1>
+
+    <script>
+        // Solicitar ao usuário o salário inicial
+        const salarioInicial = parseFloat(prompt("Digite o salário inicial do funcionário:"));
+
+        // Definir o ano inicial e o ano desejado
+        const anoInicial = 1995;
+        const anoDesejado = 2023;
+        let salario = salarioInicial;
+        let percentualAumento = 0.015; // 1,5% no primeiro ano
+
+        // Calcular o salário para cada ano a partir de 1995 até o ano desejado
+        for (let ano = anoInicial + 1; ano <= anoDesejado; ano++) {
+          salario += salario * percentualAumento; // Aumento salarial
+          percentualAumento *= 2; // Dobrar o percentual para o próximo ano
+        }
+
+        document.write(`<p>O salário em ${anoDesejado} é R$ ${salario.toFixed(2)}</p>`);
+    </script>
+</body>
+</html>
